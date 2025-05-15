@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+import {Schema,model} from 'mongoose';
 
-const paymentSchema = new mongoose.Schema({
+const paymentSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   booking: { type:Schema.Types.ObjectId, ref: 'Booking' },
   paymentId: String,
@@ -13,5 +13,5 @@ const paymentSchema = new mongoose.Schema({
   paymentMethod: String 
 }, { timestamps: true });
 
-const Payment = mongoose.model('Payment', paymentSchema);
+const Payment = model('Payment', paymentSchema);
 export default Payment;

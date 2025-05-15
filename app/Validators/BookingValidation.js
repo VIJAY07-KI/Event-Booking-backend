@@ -1,5 +1,5 @@
-import Booking from "../Models/BookingModel";
 
+import Booking from "../Models/BookingModel.js"
 export const bookingValidationSchema={
     user: {
         in: ['body'],

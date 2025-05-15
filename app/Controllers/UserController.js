@@ -1,4 +1,4 @@
-import User from '../Models/UserModel'
+import User from '../Models/UserModel.js'
 import bcryptjs from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import  {body, validationResult}  from 'express-validator'
@@ -149,7 +149,7 @@ userCtrl.modify=async(req,res)=>{
 }
 
 //update Activaton 
-userCtrl.update=async(req,res)=>{
+userCtrl.activation=async(req,res)=>{
     const errors=validationResult(req)
     if(!errors.isEmpty()){
         return res.status(400).json({error:errors.array()})
@@ -165,6 +165,8 @@ userCtrl.update=async(req,res)=>{
         res.status(500).json({error:'something went wrong'})
     }
 }
+
+// userCtrl.forget
 
 
 export default userCtrl

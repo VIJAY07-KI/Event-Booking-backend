@@ -1,4 +1,4 @@
-import User from "../Models/UserModel";
+import User from "../Models/UserModel.js";
 
 export const registerValidationSchema={
 
@@ -80,7 +80,5 @@ export const loginValidationSchema={
             options:{minLength:8,minLowercase:1,minNumber:1,minSymbol:1,minUppercase:1}
         },
         trim:true
-
-
     }
 }

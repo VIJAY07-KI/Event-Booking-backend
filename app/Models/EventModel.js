@@ -12,6 +12,7 @@ const eventSchema = new mongoose.Schema({
   bookedSeats: [],
   averageRating: Number,
   numReviews: Number,
+  isVerified:{type:Boolean,default:false}
 }, { timestamps: true });
 
 const Event = mongoose.model('Event', eventSchema);

@@ -1,4 +1,4 @@
-import Event from "../Models/EventModel";
+import Event from "../Models/EventModel.js";
 
 export  const eventValidationSchema={
     title: {
